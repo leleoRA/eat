@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DrivenEats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <h1>DrivenEats</h1>
+    <span> Sua comida em 6 minutos</span>
+  </nav>
+  <div class="container">
+    <div class="category">
+      <h2>Primeiro, seu prato</h2>
+      <div>
+        <div onclick="selectDelivery(this)" class="delivery" data-category='plate'>
+          <img src="./img/frango_yin_yang.png" alt="delivery">
+          <h3>Frango Yin Yang</h3>
+          <span>Um pouco de batata, um pouco de salada</span>
+          <div class="price">
+            <p>R$ 14,90</p>
+            <img src="icon/checkmark-circle.svg" alt="mark" />
+          </div>
+        </div>
+        <div onclick="selectDelivery(this)" class="delivery" data-category='plate'>
+          <img src="./img/frango_yin_yang.png" alt="delivery">
+          <h3>Frango Yin Yang</h3>
+          <span>Um pouco de batata, um pouco de salada</span>
+          <div class="price">
+            <p>R$ 14,90</p>
+            <img src="icon/checkmark-circle.svg" alt="mark" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="category">
+      <h2>Agora, sua bebida</h2>
+      <div>
+        <div onclick="selectDelivery(this)" class="delivery" data-category='drink'>
+          <img src="./img/coquinha_gelada.png" alt="delivery">
+          <h3>Coquinha gelada</h3>
+          <span>Lata 350ml</span>
+          <div class="price">
+            <p>R$ 4,90</p>
+            <img src="icon/checkmark-circle.svg" alt="mark"/>
+          </div>
+        </div>
+        <div onclick="selectDelivery(this)" class="delivery" data-category='drink'>
+          <img src="./img/coquinha_gelada.png" alt="delivery">
+          <h3>Coquinha gelada</h3>
+          <span>Lata 350ml</span>
+          <div class="price">
+            <p>R$ 4,90</p>
+            <img src="icon/checkmark-circle.svg" alt="mark"/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="category">
+      <h2>Por fim, sua sobremesa</h2>
+      <div>
+        <div onclick="selectDelivery(this)" class="delivery" data-category="dessert">
+          <img src="./img/pudim.png" alt="delivery">
+          <h3>Pudim</h3>
+          <span>Apenas um saboroso pudim</span>
+          <div class="price">
+            <p>R$ 7,90</p>
+            <img src="icon/checkmark-circle.svg" alt="mark"/>
+          </div>
+        </div>
+        <div onclick="selectDelivery(this)" class="delivery" data-category="dessert">
+          <img src="./img/pudim.png" alt="delivery">
+          <h3>Pudim</h3>
+          <span>Apenas um saboroso pudim</span>
+          <div class="price">
+            <p>R$ 7,90</p>
+            <img src="icon/checkmark-circle.svg" alt="mark"/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <footer>
+    <button onclick="closeDelivery()" id="confirm-delivery" disabled>
+      Selecione os <span id="amount-delivery-not-selected" >3</span> itens para fechar o pedido
+    </button>
+  </footer>
+  <div class='fullscreen'>
+    <div class="modal-confirm-delivery">
+      <h4>Confirme seu pedido</h4>
+      <div class="list-delivery">
+        <div class="delivery-item">
+          <span id="plate-description" ></span>
+          <span id="plate-price"></span>
+        </div>
+        <div class="delivery-item">
+          <span id="drink-description" ></span>
+          <span id="drink-price"></span>
+        </div>
+        <div class="delivery-item" >
+          <span id="dessert-description" >Pudim</span>
+          <span id="dessert-price" ></span>
+        </div>
+        <div class="delivery-item">
+          <strong>TOTAL</strong>
+          <strong id="delivery-price-total"></strong>
+        </div>
+      </div>
+      <div class="actions-delivery">
+        <button>
+          Tudo certo, pode pedir
+        </button>
+        <button onclick="cancelDelivery()">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
